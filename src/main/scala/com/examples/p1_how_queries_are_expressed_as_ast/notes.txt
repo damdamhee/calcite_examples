@@ -1,0 +1,13 @@
+1. SELECT
+  * SELECT의 루트 (WITH절을 포함하지 않는 SELECT절)
+  * 컬럼명은 SqlIdentifier 노드로 표현된다
+  * 테이블명은 SqlIdentifier 노드로 표현된다
+  * CAST와 같은 표현식은 SqlBasicCall로 표현된다.
+
+1. WHERE
+  * WHERE는 수식을 나타내는 노드인 SqlBasicCall 노드로 표현된다
+  * SqlBasicCall은 하나의 operator(SqlBinaryOperator)와
+                  하나의 operandList(RegularImmutableList)로 구성된다
+  * RegularImmutableList는 클래스 정의를 확인할 수는 없었으나 내부적으로 SqlIdentifier와 SqlLiteral을 갖는다
+
+1.
